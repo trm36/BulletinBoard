@@ -14,6 +14,7 @@
 		01FC9EB51F33F5B3000E5D3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01FC9EB31F33F5B3000E5D3A /* LaunchScreen.storyboard */; };
 		01FC9EBD1F33F65B000E5D3A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9EBC1F33F65B000E5D3A /* Message.swift */; };
 		01FC9EBF1F33F6F6000E5D3A /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9EBE1F33F6F6000E5D3A /* CloudKitManager.swift */; };
+		01FC9EC11F340099000E5D3A /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9EC01F340099000E5D3A /* MessageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		01FC9EB61F33F5B3000E5D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01FC9EBC1F33F65B000E5D3A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		01FC9EBE1F33F6F6000E5D3A /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
+		01FC9EC01F340099000E5D3A /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				01FC9EAA1F33F5B3000E5D3A /* AppDelegate.swift */,
 				01FC9EAC1F33F5B3000E5D3A /* ViewController.swift */,
 				01FC9EBC1F33F65B000E5D3A /* Message.swift */,
+				01FC9EC01F340099000E5D3A /* MessageController.swift */,
 				01FC9EBE1F33F6F6000E5D3A /* CloudKitManager.swift */,
 				01FC9EAE1F33F5B3000E5D3A /* Main.storyboard */,
 				01FC9EB11F33F5B3000E5D3A /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 			files = (
 				01FC9EBD1F33F65B000E5D3A /* Message.swift in Sources */,
 				01FC9EAD1F33F5B3000E5D3A /* ViewController.swift in Sources */,
+				01FC9EC11F340099000E5D3A /* MessageController.swift in Sources */,
 				01FC9EBF1F33F6F6000E5D3A /* CloudKitManager.swift in Sources */,
 				01FC9EAB1F33F5B3000E5D3A /* AppDelegate.swift in Sources */,
 			);
