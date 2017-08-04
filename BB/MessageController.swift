@@ -43,7 +43,7 @@ class MessageController {
         }
     }
     
-    private func refresh(completion: @escaping ((Error?) -> Void) = {_ in }) {
+    func refresh(completion: @escaping ((Error?) -> Void) = {_ in }) {
         let sortDescriptors = [NSSortDescriptor(key: Message.dateKey, ascending: false)]
         
         cloudKitManager.fetchRecords(ofType: Message.recordType, sortDescriptors: sortDescriptors) { (records: [CKRecord]?, error: Error?) in
