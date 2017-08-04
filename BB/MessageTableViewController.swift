@@ -29,6 +29,11 @@ class MessageTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(messagesWereUpdated(_:)),
+                                               name: MessageController.didRefreshNotification,
+                                               object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,7 +57,22 @@ class MessageTableViewController: UITableViewController {
         
         return cell
     }
+    
+    @objc func messagesWereUpdated(_ notification: Notification) {
+        tableView.reloadData()
+    }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
 

@@ -15,6 +15,7 @@
 		01FC9EBD1F33F65B000E5D3A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9EBC1F33F65B000E5D3A /* Message.swift */; };
 		01FC9EBF1F33F6F6000E5D3A /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9EBE1F33F6F6000E5D3A /* CloudKitManager.swift */; };
 		01FC9EC11F340099000E5D3A /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9EC01F340099000E5D3A /* MessageController.swift */; };
+		01FC9EC51F340D10000E5D3A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FC9EC41F340D10000E5D3A /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		01FC9EBC1F33F65B000E5D3A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		01FC9EBE1F33F6F6000E5D3A /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		01FC9EC01F340099000E5D3A /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		01FC9EC21F340D02000E5D3A /* BB.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BB.entitlements; sourceTree = "<group>"; };
+		01FC9EC41F340D10000E5D3A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01FC9EC51F340D10000E5D3A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +50,7 @@
 			children = (
 				01FC9EA91F33F5B3000E5D3A /* BB */,
 				01FC9EA81F33F5B3000E5D3A /* Products */,
+				01FC9EC31F340D10000E5D3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +65,7 @@
 		01FC9EA91F33F5B3000E5D3A /* BB */ = {
 			isa = PBXGroup;
 			children = (
+				01FC9EC21F340D02000E5D3A /* BB.entitlements */,
 				01FC9EAA1F33F5B3000E5D3A /* AppDelegate.swift */,
 				01FC9EAC1F33F5B3000E5D3A /* MessageTableViewController.swift */,
 				01FC9EBC1F33F65B000E5D3A /* Message.swift */,
@@ -71,6 +77,14 @@
 				01FC9EB61F33F5B3000E5D3A /* Info.plist */,
 			);
 			path = BB;
+			sourceTree = "<group>";
+		};
+		01FC9EC31F340D10000E5D3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01FC9EC41F340D10000E5D3A /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +119,14 @@
 				TargetAttributes = {
 					01FC9EA61F33F5B3000E5D3A = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -285,8 +307,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BB/BB.entitlements;
 				DEVELOPMENT_TEAM = B9KMJ3NRM7;
 				INFOPLIST_FILE = BB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MottApplications.BB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,8 +323,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BB/BB.entitlements;
 				DEVELOPMENT_TEAM = B9KMJ3NRM7;
 				INFOPLIST_FILE = BB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MottApplications.BB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
