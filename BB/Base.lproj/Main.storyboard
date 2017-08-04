@@ -29,6 +29,9 @@
                                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18r-wx-Vs6">
                                     <rect key="frame" x="336" y="7" width="31" height="30"/>
                                     <state key="normal" title="Post"/>
+                                    <connections>
+                                        <action selector="postButtonTapped" destination="9jr-Qi-3Kx" eventType="touchUpInside" id="oO9-Zt-Zop"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -72,10 +75,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="pTX-ub-Hs8"/>
+                    <connections>
+                        <outlet property="textField" destination="X9K-Kk-v4A" id="H9q-V7-To9"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeX-Ho-xuL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="91.304347826086968"/>
+            <point key="canvasLocation" x="452" y="91"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LL2-sX-3Rr">
